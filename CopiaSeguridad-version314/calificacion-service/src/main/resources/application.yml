@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  data:
+    mongodb:
+      #uri: mogidb://localhost:27017
+      uri: mongodb+srv://usuario_manuel:V4Mo8ufvdgwGLBRs@miclusterdepruebas.yo43yhc.mongodb.net/microservicios
+      #database: microservicios
+  application:
+    name: CALIFICACION-SERVICE
+
+eureka:
+  instance:
+    prefer-ip_address: true #Con esto anuncia la ip de los servicios
+  client:
+    fetch_registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
